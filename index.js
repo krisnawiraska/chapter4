@@ -1,55 +1,63 @@
-// console.log("======soal no 1======");
+console.log("======soal no 1======");
 
-// function kategoriUsia(usia) {
-//     if (typeof usia !== "number") {
-//         console.log("input harus number");
-//         return;
-//     }
-//     if (usia >= 0 && usia <= 12) {
-//         return "anak-anak";             
-//     }else if (usia >= 13 && usia <= 19) {
-//         return "remaja";
-//     }else if (usia >= 20 && usia <= 35) {
-//         return "dewasa"
-//     }else if (usia >=36) {
-//         return "lanjut usia"
-//     }
-// } console.log(kategoriUsia(8));
-// // Output: Anak-anak
+function kategoriUsia(usia) {
+    if (typeof usia !== "number") {
+        console.log("input harus number");
+        return;
+    }
+    if (usia >= 0 && usia <= 12) {
+        return "anak-anak";             
+    }else if (usia >= 13 && usia <= 19) {
+        return "remaja";
+    }else if (usia >= 20 && usia <= 35) {
+        return "dewasa"
+    }else if (usia >=36) {
+        return "lanjut usia"
+    }
+} console.log(kategoriUsia(8));
+// Output: Anak-anak
 
-// console.log(kategoriUsia(15));
-// // Output: Remaja
+console.log(kategoriUsia(15));
+// Output: Remaja
 
-// console.log(kategoriUsia(25));
-// // Output: Dewasa
+console.log(kategoriUsia(25));
+// Output: Dewasa
 
-// console.log(kategoriUsia(40));
-// // Output: Lanjut Usia
+console.log(kategoriUsia(40));
+// Output: Lanjut Usia
 
+console.log("======= no 2========");
+function hitungBiayaParkir(lamaParkir, hari,liburNasional) {
+    hari = hari.toLowerCase();
+    let validHari1 = ["senin", "selasa", "rabu", "kamis", "jumat", "sabtu", "minggu"]
+    if (typeof lamaParkir !== "number") {
+        
+    }
+    if (!validHari1.includes(hari)) {
+        return 'Hari tidak valid';
+    }
+    let biaya = 0
+    if (lamaParkir <= 1) {
+        biaya = 10000
+    } else {
+        biaya = 10000 +(lamaParkir - 1)*5000
+    }
+    if (lamaParkir > 5) {
+        biaya -= 10000        
+    }
+    if (hari === "minggu") {
+        biaya += 5000
+    }
+    if (biaya >30000 && liburNasional) {
+        biaya -=7000
+    }
+    return biaya;
+}
 
-// function hitungBiayaParkir(lamaParkir, hari,liburNasional) {
-//     let biaya = 0
-//     if (lamaParkir <= 1) {
-//         biaya = 10000
-//     } else {
-//         biaya = 10000 +(lamaParkir - 1)*5000
-//     }
-//     if (lamaParkir > 5) {
-//         biaya -= 10000        
-//     }
-//     if (hari === "minggu") {
-//         biaya += 5000
-//     }
-//     if (biaya >30000 && liburNasional) {
-//         biaya -=7000
-//     }
-//     return biaya;
-// }
-
-// console.log(hitungBiayaParkir(2, 'Sabtu', false));
-// // Output: Biaya Parkir: Rp15000.
-// console.log(hitungBiayaParkir(6, 'Minggu', true));
-// // Output: Biaya Parkir: Rp25000.
+console.log(hitungBiayaParkir(2, 'Satu', false));
+// Output: Biaya Parkir: Rp15000.
+console.log(hitungBiayaParkir(6, 'Minggu', true));
+// Output: Biaya Parkir: Rp25000.
 
 
 console.log("============ Soal Tiga ============");
